@@ -6,8 +6,8 @@ module.exports = {
     // 指定子路径。比如，如果你的应用部署在
     // https://www.foobar.com/my-app/
     // 那么将这个值改为 `/my-app/`
-    baseUrl: 'admin',//github打包放开
-   // baseUrl: './',
+    // baseUrl: 'admin', //github打包放开
+    baseUrl: './',
     // 将构建好的文件输出到哪里
     outputDir: 'admin',
 
@@ -18,7 +18,7 @@ module.exports = {
 
     // 使用带有浏览器内编译器的完整构建版本
     // 查阅 https://cn.vuejs.org/v2/guide/installation.html#运行时-编译器-vs-只包含运行时
-   // compiler: false,
+    // compiler: false,
     runtimeCompiler: true, //关键点在这
     // 调整内部的 webpack 配置。
     // 查阅 https://github.com/vuejs/vue-doc-zh-cn/vue-cli/webpack.md
@@ -27,7 +27,7 @@ module.exports = {
 
     // vue-loader 选项
     // 查阅 https://vue-loader.vuejs.org/zh-cn/options.html
-   // vueLoader: {},
+    // vueLoader: {},
 
     // 是否为生产环境构建生成 source map？
     productionSourceMap: true,
@@ -56,32 +56,32 @@ module.exports = {
     // 是否使用 `autoDLLPlugin` 分割供应的包？
     // 也可以是一个在 DLL 包中引入的依赖的显性的数组。
     // 查阅 https://github.com/vuejs/vue-doc-zh-cn/vue-cli/cli-service.md#dll-模式
-   // dll: false,
+    // dll: false,
 
     // PWA 插件的选项。
     // 查阅 https://github.com/vuejs/vue-doc-zh-cn/vue-cli-plugin-pwa/README.md
     pwa: {},
-  //  pages: {
-       // index: {
-            // page 的入口
-          //  entry: 'src/index/main.js',
-            // 模板来源
-           // template: 'public/index.html',
-            // 在 dist/index.html 的输出
-         //   filename: 'index.html',
-            // 当使用 title 选项时，
-            // template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
-           // title: 'Index Page',
-            // 在这个页面中包含的块，默认情况下会包含
-            // 提取出来的通用 chunk 和 vendor chunk。
-         //   chunks: ['chunk-vendors', 'chunk-common', 'index']
-      //  },
-        // 当使用只有入口的字符串格式时，
-        // 模板会被推导为 `public/subpage.html`
-        // 并且如果找不到的话，就回退到 `public/index.html`。
-        // 输出文件名会被推导为 `subpage.html`。
-        //subpage: 'src/subpage/main.js'
-  //  },
+    //  pages: {
+    // index: {
+    // page 的入口
+    //  entry: 'src/index/main.js',
+    // 模板来源
+    // template: 'public/index.html',
+    // 在 dist/index.html 的输出
+    //   filename: 'index.html',
+    // 当使用 title 选项时，
+    // template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
+    // title: 'Index Page',
+    // 在这个页面中包含的块，默认情况下会包含
+    // 提取出来的通用 chunk 和 vendor chunk。
+    //   chunks: ['chunk-vendors', 'chunk-common', 'index']
+    //  },
+    // 当使用只有入口的字符串格式时，
+    // 模板会被推导为 `public/subpage.html`
+    // 并且如果找不到的话，就回退到 `public/index.html`。
+    // 输出文件名会被推导为 `subpage.html`。
+    //subpage: 'src/subpage/main.js'
+    //  },
     // 配置 webpack-dev-server 行为。
     devServer: {
         open: process.platform === 'admin',
@@ -107,18 +107,16 @@ module.exports = {
             postcss: {
                 // 这是rem适配的配置  注意： remUnit在这里要根据lib-flexible的规则来配制，如果您的设计稿是750px的，用75就刚刚好。
                 plugins: [
-                    require("postcss-px2rem")({
+                    require('postcss-px2rem')({
                         remUnit: 75
                     })
                 ]
             }
-        },
-
+        }
     },
 
     // 第三方插件的选项
     pluginOptions: {
         // ...
-
     }
 }
